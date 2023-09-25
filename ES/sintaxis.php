@@ -53,10 +53,20 @@
         $var5= $var3+$var4;
         
         */
-
-
-
-
+        $varArray1=array("1","2");
+        echo $varArray1[1];
+        $mapa1=array("clave1" =>1,"clave2" =>42);
+        echo $mapa1["clave1"];
+        
+        /* Cadenas de texto en p0hp */
+        $cadenatotal="hola";
+        str_replace("o","a",$cadenatotal);
+        echo $cadenatotal; /* Devolvería hala por que cambiaria la o por una a */
+        $cadenatotal="Jorge Nieto";
+        str_replace(" ","",$cadenatotal); /* Eliminaria el espacio  */
+        str_lower($cadenatotal); /* convierte a minuscula */
+        strlen($cadenatotal); /* Devolvería la longitud del $cadenatotal */
+        trim($cadenatotal); /* Elimina los espacios al inicio y final del string*/
 
     ?>
 </body>
