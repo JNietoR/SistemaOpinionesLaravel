@@ -32,12 +32,14 @@
         echo "||";
         $var2=3;
         echo $var1;
-        /*
-        Podemos definir funciones de forma global, local o estatica
-        */
-        global $varglobal="global"; /* Puedes verla desde cualquier sitio */
-        $varlocal=0.1; /*Puede utilizarse en el bloque donde se declara */
-        static $var=0; /* Variable donde su valor no varia */
+        /* Podemos definir funciones de forma global, local o estatica */
+        global $varglobal;
+        /* Puedes verla desde cualquier sitio */
+        $varglobal = "global"; 
+        $varlocal=0.1; 
+        /*Puede utilizarse en el bloque donde se declara */
+        static $var=0; 
+        /* Variable donde su valor no varia */
         /*Para definir una constante define(nombrevlaribable,valor); */
         define("IRPF",15);
         /* Para imprimir la variable no se utiliza el $ delante de la variable ya que es una constante */
@@ -64,9 +66,18 @@
         echo $cadenatotal; /* Devolvería hala por que cambiaria la o por una a */
         $cadenatotal="Jorge Nieto";
         str_replace(" ","",$cadenatotal); /* Eliminaria el espacio  */
-        str_lower($cadenatotal); /* convierte a minuscula */
         strlen($cadenatotal); /* Devolvería la longitud del $cadenatotal */
         trim($cadenatotal); /* Elimina los espacios al inicio y final del string*/
+
+
+        define("PI", 3.14);
+        $radio=6;
+
+        $volumen = (4/3)*PI*(pow($radio,3));
+
+        echo $volumen;
+
+
 
     ?>
 </body>
