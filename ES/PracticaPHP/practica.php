@@ -74,11 +74,17 @@
         echo "<br>";
         //definimos la variable $palabra con la frase “Hello World”.
         $palabra="Hello World";
+        $palabra1=$palabra;
         //Utilizamos la función str_replace() para eliminar las vocales.
         $palabra=str_replace("e", "", $palabra);
         $palabra=str_replace("o", "", $palabra);
         $palabra=str_replace("u", "", $palabra);
         echo $palabra;
+        //Otra forma de hacerlo sería utilizando un array con las vocales, utilizando la misma función pero solo sería un paso optimizando la memoria necesaria para realizar la operación.
+        $vocales = array("a", "e", "i", "o", "u");
+        $palabra1=str_replace($vocales, "", $palabra);
+        echo "<br>";
+        echo $palabra1;
         echo "<br>";
         echo "<br>";
         echo "Ejercicio 7. Crea una variable sin contenido y usa la función correspondiente para comprobar si está vacía. ¿Qué ocurre y por qué”. ";
