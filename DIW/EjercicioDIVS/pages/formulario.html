@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styleform.css">
+    <script src="../js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="nav"><a href="../pages/index.html" target="_blank">HOME</a></h1>
+        <h1 class="nav"><a href="../pages/formulario.html">FORMULARIO</a></h1>
+    </header>
+    <main>
+        <div class="formulario">
+            <form method="post" action="form.php">
+                <div class="divform">
+                    <label for="user">USER</label>
+                    <input type="text" name="user" id="user">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password">
+                    <label for="email" id="email-label">EMAIL</label>
+                    <input type="email" id="email" name="email" id="email">
+                    <input type="submit" value="SIGN UP">
+                    <div class="pregunta">
+                        <label> <a class="registrado" onclick="toggleLogin()">¿Ya estas registrado?</a></label>
+                    </div>
+                </div>               
+            </form>
+        </div>
+        <div class="imagenformulario">
+            <img class="foto"
+                src="https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/b9ea2dc46d95cf9fa3f77209e27ae7a6488368f1-1920x1080.jpg" />
+        </div>
+    </main>
+    <footer>
+        <ul class="lista">
+            <li><a href="https://regulations.cdprojektred.com/privacy_policy"><span>Términos de uso y Política de privacidad</span></a></li>
+            <li><a href="https://cdprojektred.com/fan-content"><span>Fan Content Guidelines</span></a></li>
+            <li><a href="/es/modding-support"><span>REDmod</span></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
