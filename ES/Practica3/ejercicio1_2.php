@@ -5,11 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $gender = $_POST["gender"];
     $cesta = $_POST["cesta"];
-    $num1 = $_POST["num1"];
-    $num2 = $_POST["num2"];
-    $num3 = $_POST["num3"];
-    $num4 = $_POST["num4"];
-    $num5 = $_POST["num5"];
 
     if($cesta <= 50){
             $cesta+=3.95;
@@ -41,25 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
     }
     */
-    //Datos recibidos por el formulario con gastos de envio incluidos
-    echo "<h1>Resumen pedido con gastos de envio incluidos:</h1>";
-    echo "Nombre: " . $firstname . "<br>";
-    echo "Apellido: " . $lastname . "<br>";
-    echo "Correo Electrónico: " . $email . "<br>";
-    echo "Género: " . $gender . "<br>";
-    echo "Cesta con gastos de envio: " . $cesta . "€ <br>";
-
-    $numeros = [$num1, $num2, $num3, $num4, $num5];
-    $mayor = $numeros[0];
-
-    for ($i = 1; $i < count($numeros); $i++) {
-        if ($numeros[$i] > $mayor) {
-            $mayor = $numeros[$i];
-        }
-    }
-
-    //mayor numero 
-    echo "Mayor entre los 5 numeros: " . $mayor . "<br>";
+    echo "Datos personales formulario: <br>";
+    echo "Nombre: ".$firstname."<br>";
+    echo "Apellidos: ".$lastname."<br>";
+    echo "Email: ".$email."<br>";
+    echo "Genero: ".$gender."<br>";
+    echo "Cesta con gastos de envio: ".$cesta."<br>";
 }
 
 ?>
