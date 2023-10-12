@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Formulario</title>
+    <link rel="stylesheet" href="./formulario.css">
 </head>
+
 <body>
+    <!-- Formulario basico para poder realizar el ejercicio especificandoel archivo php asociado a este formulario en el action 
+        y el metodo para enviar informacion post-->
     <form action="ejercicio1_2.php" method="post">
         <fieldset>
             <legend>Ejercicio 1 y 2</legend>
             <label for="firstname">Nombre:</label>
             <input type="text" id="firstname" name="firstname" required><br>
-            
+
             <label for="lastname">Apellido:</label>
             <input type="text" id="lastname" name="lastname" required><br>
-            
-            <label for="email">Correo Electrónico:</label>
+
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br>
-            
+
             <div>
                 <input type="radio" id="male" name="gender" value="Male">
                 <label for="male">Masculino</label>
@@ -30,4 +35,5 @@
         </fieldset>
     </form>
 </body>
+
 </html>

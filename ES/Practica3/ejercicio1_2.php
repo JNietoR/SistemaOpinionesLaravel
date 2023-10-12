@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["gender"];
     $cesta = $_POST["cesta"];
 
-// Agregar los gastos de envio a la cesta según la cantidad
+// Agregar los gastos de envio a la cesta según la cantidad de la misma, el valor no debería ser nunca menor de 0 por que en el html le indicamos que el minimo era 0
     if($cesta <= 50){
             $cesta+=3.95;
         }else if($cesta > 50 && $cesta <= 75){
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cesta=0;
         }
     
-    /*   Tengo comenctado el ejercicio 2 ya que es el mismo que el 1 pero utilizando switch case en lugar de ifelse
+    /*   Tengo comenctado el ejercicio 2 ya que es el mismo que el 1 pero utilizando switch case en lugar de ifelse para controlar el flujo del programa
     Ejercicio 2.
 
     switch (true) {
