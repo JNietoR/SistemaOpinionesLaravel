@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["gender"];
     $cesta = $_POST["cesta"];
 
+// Agregar los gastos de envio a la cesta según la cantidad
     if($cesta <= 50){
             $cesta+=3.95;
         }else if($cesta > 50 && $cesta <= 75){
@@ -15,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }else{
             $cesta=0;
         }
-    /*
+    
+    /*   Tengo comenctado el ejercicio 2 ya que es el mismo que el 1 pero utilizando switch case en lugar de ifelse
     Ejercicio 2.
 
     switch (true) {
@@ -36,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
     }
     */
+//Imprimir el resultado del formulario con sus gastos de envio añadidos a la cesta
     echo "Datos personales formulario: <br>";
     echo "Nombre: ".$firstname."<br>";
     echo "Apellidos: ".$lastname."<br>";
