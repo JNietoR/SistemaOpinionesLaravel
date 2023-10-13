@@ -14,7 +14,7 @@
 	echo "<p> </p>";
 	
 	//Mostraría un error ya que la constante no puede modificar su valor
-	PI = PI +1;
+	// PI = PI +1;
 	
 	// Definición de constantes con la función define
 	define("NOMBRE", "Luisja");
