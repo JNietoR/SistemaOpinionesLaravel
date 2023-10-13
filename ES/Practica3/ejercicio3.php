@@ -30,3 +30,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //imprimir resultado
     echo "Mayor entre los 5 numeros: " . $mayor . "<br>";
 }
+?>
