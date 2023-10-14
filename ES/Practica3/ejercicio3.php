@@ -26,6 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     rsort($numeros, SORT_NUMERIC);
     $mayor = $numeros[0];
     */
+    /*
+    otra forma posible seria con la función max que nos indica el valor mas alto de un array
+    $mayor = max($numeros);
+     */
 
     //imprimir resultado
     echo "Mayor entre los 5 numeros: " . $mayor . "<br>";
