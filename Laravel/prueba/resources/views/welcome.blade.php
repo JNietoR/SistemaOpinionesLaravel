@@ -29,7 +29,7 @@
                 </div>
             @endif
 
-            <h1>Welcome!</h1>
+            <h1 class="font-semibold text-gray-600 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Prueba de formulario con Laravel</h1>
         </div>
     </body>
 </html>
