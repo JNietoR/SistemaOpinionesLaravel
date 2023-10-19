@@ -48,10 +48,8 @@ function countBy() {
         arrayej2.innerHTML = "Por favor introduce numeros positivos el array esta vacio: [" + array + "]";
     } else {
 
-        for (var i = 1; array.length <= Y; i++) {
-            if (i = 1) {
-                array.push(1);
-            }
+        for (var i = 1; array.length < Y; i++) {
+           
             array.push(X * i);
         }
         // Poner la array
@@ -81,6 +79,7 @@ function ejercicio3() {
     var matriz = [];
     var contador = 1;
     for (var i = 1; i <= dimensiones; i++) {
+        // Crea fila con cada iteracion
         var fila = [];
         for (var j = 1; j <= dimensiones; j++) {
             // calcula la tabla y la mete dentro de la fila y a su vez dentro de la matriz
@@ -97,9 +96,6 @@ function ejercicio3() {
         }
         resultadoej3.innerHTML += "<span> |</span> <br>"; // Agregar un salto de línea después de cada fila
     }
-
-
-
 }
 
 
@@ -160,17 +156,67 @@ function ejercicio4() {
 }
 
 function ejercicio5() {
- 
+
 }
 function ejercicio6() {
 
 }
 function ejercicio7() {
+    var arrayNombres = [];
+    var datos;
+    var numLikes;
+    var resultado;
+    var otros;
 
+
+    while (true) {
+        datos = prompt("Ingresa un dato para agregar al array de likes:");
+        if (datos === "fin") {
+            break;
+        }
+        arrayNombres.push(datos);
+    }
+
+    numLikes = arrayNombres.length;
+
+    if (numLikes === 0) {
+        resultado = "no one likes this";
+    } else if (numLikes === 1) {
+        resultado = arrayNombres[0] + " likes this";
+    } else if (numLikes === 2) {
+        resultado = arrayNombres[0] + " and " + arrayNombres[1] + " like this";
+    } else if (numLikes === 3) {
+        resultado = arrayNombres[0] + ", " + arrayNombres[1] + " and " + arrayNombres[2] + " like this";
+    } else {
+        otros = numLikes - 2;
+        resultado = arrayNombres[0] + ", " + arrayNombres[1] + " and " + otros + " others like this";
+    }
+
+
+    arrayej7.innerHTML = "[" + arrayNombres + "] --> " + resultado;
 }
 function ejercicio8() {
 
 }
 function ejercicio9() {
+    /*Un restaurante nos ha encargado una aplicación para colocar a los clientes en sus
+mesas. En una mesa se pueden sentar de 0 (mesa vacía) a 4 comensales (mesa llena).
+El funcionamiento es el siguiente:
+Cuando llega un cliente se le pregunta cuántos son. Como el programa no está preparado para
+colocar a grupos mayores a 4, si un cliente solicita una mesa con mas comensales (pej, 6), el
+programa dará el mensaje “Lo siento, no admitimos grupos de 6, haga grupos de 4 personas
+como máximo e intente de nuevo” y volverá a preguntar.dddd
+Para cada grupo nuevo que llega, se busca siempre la primera mesa libre (con 0 personas). Si
+no quedan mesas libres, se busca una donde haya hueco para todo el grupo (por ejemplo si el
+grupo es de dos personas, se podrá colocar en mesas donde haya una o dos personas).
+Cada vez que se sientan nuevos clientes se debe mostrar el estado de las mesas.
+Los grupos no se pueden romper aunque haya huecos sueltos suficientes.
+A tener en cuenta:
+ El programa comienza pidiendo el numero de mesas que tiene el restaurante.
+ Inicialmente, las mesas se cargan con valores aleatorios entre 0 y 4 y mostrará por
+pantalla como quedan las mesas inicialmente.
+ El programa seguirá pidiendo comensales hasta que se introduzca un valor negativo 
+     */
+    
 
 }
