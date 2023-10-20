@@ -10,7 +10,9 @@ class PostController extends Controller
         return view('posts.index');
     }
     public function store(Request $request){
-        return $request->all();
+        $request->validate(['body' => 'required']);
+        $request->user()->posts()->create($request->only('body'));
+        return back()->with('status', 'Post guarado exitosamente');
     }
     public function destroy(){
         //eliminar
