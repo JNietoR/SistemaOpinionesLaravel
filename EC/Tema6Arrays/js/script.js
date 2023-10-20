@@ -49,7 +49,7 @@ function countBy() {
     } else {
 
         for (var i = 1; array.length < Y; i++) {
-           
+
             array.push(X * i);
         }
         // Poner la array
@@ -197,9 +197,9 @@ function ejercicio7() {
 }
 function ejercicio8() {
 
-}
-function ejercicio9() {
-    /*Un restaurante nos ha encargado una aplicación para colocar a los clientes en sus
+}   
+
+/*Un restaurante nos ha encargado una aplicación para colocar a los clientes en sus
 mesas. En una mesa se pueden sentar de 0 (mesa vacía) a 4 comensales (mesa llena).
 El funcionamiento es el siguiente:
 Cuando llega un cliente se le pregunta cuántos son. Como el programa no está preparado para
@@ -217,6 +217,53 @@ A tener en cuenta:
 pantalla como quedan las mesas inicialmente.
  El programa seguirá pidiendo comensales hasta que se introduzca un valor negativo 
      */
-    
 
+function ejercicio9() {
+    var mesas = [];
+    var numMesas;
+    var numPersonas;
+    var mensajePersonas;
+    
+    do {
+        numMesas = parseInt(prompt("Indica el número de mesas"));
+    } while (numMesas <= 0);
+
+    // Rellenar mesas con valores aleatorios entre 0 y 4.
+    for (var i = 0; i < numMesas; i++) {
+        mesas.push(Math.floor(Math.random() * 5));
+    }
+    console.log("Estado inicial de las mesas: " + mesas);
+
+    do {
+        numPersonas = parseInt(prompt("¿Cuántas personas son?"));
+        
+        if (numPersonas <= 0) {
+            console.log("¡Gracias por visitarnos!");
+            break;
+        } else if (numPersonas > 4) {
+            mensajePersonas = "Lo siento, no admitimos grupos de " + numPersonas + " personas. Haga grupos de 4 personas como máximo";
+        } else {
+            var sentado = false;
+
+            for (var i = 0; i < mesas.length; i++) {
+                if (mesas[i] === 0) {
+                    mesas[i] = numPersonas;
+                    mensajePersonas = "Sientese en la mesa " + i;
+                    sentado = true;
+                    break;
+                } else if (mesas[i] >= numPersonas && mesas[i] < 4) {
+                    mesas[i] += numPersonas;
+                    mensajePersonas = "Sientese en la mesa " + i;
+                    sentado = true;
+                    break;
+                }
+            }
+
+            if (!sentado) {
+                mensajePersonas = "Lo siento, no hay mesas disponibles para " + numPersonas + " personas en este momento.";
+            }
+        }
+        console.log(mensajePersonas);
+        console.log("Estado de las mesas después de la asignación: " + mesas);
+    } while (numPersonas > 0);
 }
