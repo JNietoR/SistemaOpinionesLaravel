@@ -95,7 +95,8 @@
                                 {{ __('Profile') }}
                             </x-responsive-nav-link>
 
-                            <x-responsive-nav-link :href="route('posts.index')"> {{ __('Posts') }}
+                            <x-responsive-nav-link :href="route('posts.index')"> 
+                                    {{ __('Posts') }}
                                 </x-responsive-nav-link>
 
                                 <!-- Authentication -->
