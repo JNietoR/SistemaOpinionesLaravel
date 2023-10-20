@@ -1,0 +1,16 @@
+header {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+#titulo {
+  background-color: green;
+  text-align: center;
+  color: red;
+}
+
+#tabla {
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
