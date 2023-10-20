@@ -15,9 +15,8 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'dashboard');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
