@@ -15,7 +15,9 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::redirect('/', 'dashboard');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -27,8 +29,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('dashboard', [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('posts.index');
-Route::post('posts', [PostController::class, 'store'])->middleware(['auth', 'verified'])->name('posts.store');
-Route::delete('posts/{posts}', [PostController::class, 'destroy'])->middleware(['auth', 'verified'])->name('posts.destroy');
+Route::get('posts', [PostController::class, 'index'])->name('posts.index');
+Route::post('posts', [PostController::class, 'store'])->name('posts.store');
+Route::delete('posts/{posts}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 require __DIR__.'/auth.php';

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return view('posts.index');
+        return 'index';
     }
-    public function store(Request $request){
-        return $request;
+    public function store(){
+        //guardar
     }
     public function destroy(){
         //eliminar
