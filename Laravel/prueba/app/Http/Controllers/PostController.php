@@ -23,7 +23,9 @@ class PostController extends Controller
 
         return back()->with('status', 'Post guarado exitosamente');
     }
-    public function destroy(Post $post){
+    public function destroy(Request $request, Post $post){
+
+        $this->authorize('destroy-post', $post);
         
         $post->delete();
 
