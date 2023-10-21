@@ -30,6 +30,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('dashboard', [PostController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::post('posts', [PostController::class, 'store'])->middleware(['auth'])->name('posts.store');
-Route::delete('posts/{posts}', [PostController::class, 'destroy'])->middleware(['auth'])->name('posts.destroy');
+Route::delete('posts/{post}', [PostController::class, 'destroy'])->middleware(['auth'])->name('posts.destroy');
 
 require __DIR__.'/auth.php';

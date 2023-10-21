@@ -23,8 +23,11 @@ class PostController extends Controller
 
         return back()->with('status', 'Post guarado exitosamente');
     }
-    public function destroy(){
-        //eliminar
+    public function destroy(Post $post){
+        
+        $post->delete();
+
+        return back();
     }
 }
 
