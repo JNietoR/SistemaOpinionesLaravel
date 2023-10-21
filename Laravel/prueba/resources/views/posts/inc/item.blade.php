@@ -1,10 +1,14 @@
-<a href="#" class="text-lg font-semibold">{{$post->user->name}}</a>
+<a href="{{ route('users.show', $post->user->id) }}" class="text-lg font-semibold">
+    {{$post->user->name}}
+</a>
+
 <p class="mt-1 text-xs">
     <em>
         {{ $post->created_at->format('d/m/Y') }}
     </em>
     {{ $post->body }}
 </p>
+
 @can('delete', $post)
 <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
     @csrf
