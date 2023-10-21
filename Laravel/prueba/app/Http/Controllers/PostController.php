@@ -25,7 +25,7 @@ class PostController extends Controller
     }
     public function destroy(Request $request, Post $post){
 
-        $this->authorize('destroy-post', $post);
+        $this->authorize('delete', $post);
         
         $post->delete();
 
